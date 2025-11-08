@@ -1,0 +1,23 @@
+{
+    "default": {
+        "paths": [
+            "tests/features/"
+        ],
+        "require": [
+            "tests/features/step-definitions/*.ts"
+        ],
+        "formatOptions": {
+            "snippetInterface": "async-await"
+        },
+        "format": [
+            [
+                "html",
+                "cucumber-report.html"
+            ],
+            "summary",
+            "progress-bar",
+            "json:./cucumber-report.json",
+            "rerun:reports/rerun.txt"
+        ]
+    }
+}

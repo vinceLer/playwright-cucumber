@@ -1,0 +1,17 @@
+{
+  "name": "@src/pages",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@core/base": "workspace: ^1.0.0",
+    "@src/locators": "workspace: ^1.0.0",
+    "@common/data": "workspace: ^1.0.0"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "playwright-cucumber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:cucumber": "cucumber-js --require-module ts-node/register",
+    "test:cucumber:rerun": "cucumber-js --require-module ts-node/register @reports/rerun.txt",
+    "test": "pnpm exec playwright test",
+    "debug": "pnpm exec playwright test --debug",
+    "report": "pnpm exec playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.2.0",
+    "@cucumber/html-formatter": "^22.0.0",
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.10.0",
+    "ts-node": "^10.9.2"
+  }
+}

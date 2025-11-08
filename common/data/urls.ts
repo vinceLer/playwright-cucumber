@@ -1,0 +1,1 @@
+export const BASE_PAGE_PLAYWRIGHT = 'https://playwright.dev/';

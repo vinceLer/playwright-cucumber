@@ -88,7 +88,7 @@ pnpm exec playwright create
 pnpm add -D @cucumber/cucumber 
 ```
 
-# 3. 🧠 Install ts-node 
+## 3. 🧠 Install ts-node 
 
 ```bash 
 pnpm add -D ts-node 

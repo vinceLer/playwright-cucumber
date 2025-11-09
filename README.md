@@ -96,9 +96,10 @@ pnpm add -D ts-node
 
 ## 4. 🧾 Configure Cucumber 
 
-Create a `cucumber.json` file at the root of the project:
+Create a `cucumber.json` and `tsconfig.json` files at the root of the project :
 
-```json 
+```json
+// cucumber.json
 
 {
     "default": {
@@ -124,6 +125,19 @@ __🔍 Explanation__ :
 - 📂 `paths`: defines where the feature files are located (e.g., `tests/features/`).
 - 🧩 `require`: specifies the location of the step definition files (e.g., `tests/features/step-definitions/*.ts`).
 - ⚡ `"snippetInterface": "async-await"` — ensures generated step definitions use the `async/await` syntax, fully compatible with Playwright’s asynchronous actions.
+
+```json
+// tsconfig.json
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "strict": true
+  }
+}
+```
 
 ## 🧪 5. Implement test with Cucumber files  
 

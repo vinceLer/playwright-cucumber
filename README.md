@@ -9,7 +9,7 @@
 - @playwright/test: 1.56.1
 - @types/node: 24.10.0
 - @cucumber/cucumber: 12.2.0
-- @cucumber/html-formatter": 22.0.0
+- @cucumber/html-formatter: 22.0.0
 - ts-node: 10.9.2
 
 

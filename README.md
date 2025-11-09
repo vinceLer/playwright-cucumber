@@ -98,9 +98,9 @@ pnpm add -D ts-node
 
 Create a `cucumber.json` and `tsconfig.json` files at the root of the project :
 
-```json
-// cucumber.json
+__`cucumber.json`__ : 
 
+```json
 {
     "default": {
         "paths": [ "tests/features/" ],
@@ -126,8 +126,9 @@ __🔍 Explanation__ :
 - 🧩 `require`: specifies the location of the step definition files (e.g., `tests/features/step-definitions/*.ts`).
 - ⚡ `"snippetInterface": "async-await"` — ensures generated step definitions use the `async/await` syntax, fully compatible with Playwright’s asynchronous actions.
 
+__`tsconfig.json`__ : 
+
 ```json
-// tsconfig.json
 {
   "compilerOptions": {
     "module": "commonjs",

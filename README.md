@@ -70,3 +70,103 @@ npx cucumber-js --require-module ts-node/register
 | **Run tests with Cucumber** 🥒 | `pnpm test:cucumber` | `cucumber-js --require-module ts-node/register` | Runs all tests using Cucumber |
 | **Run failed tests** 🥒 | `test:cucumber:rerun` | `pnpm exec playwright test` | Runs all last failed tests |
 
+<br>
+
+# 🧩 From Scratch Setup  
+
+## ⚙️ 1. Install Playwright 
+
+```bash 
+pnpm exec playwright create 
+```
+
+👉 Follow the instructions in the terminal.
+
+## 🥒 2. Install Cucumber 
+
+```bash 
+pnpm add -D @cucumber/cucumber 
+```
+
+# 3. 🧠 Install ts-node 
+
+```bash 
+pnpm add -D ts-node 
+```
+
+## 4. 🧾 Configure Cucumber 
+
+Create a `cucumber.json` file at the root of the project:
+
+```json 
+
+{
+    "default": {
+        "paths": [ "tests/features/" ],
+        "require": [ "tests/features/step-definitions/*.ts" ],
+        "formatOptions": {
+            "snippetInterface": "async-await"
+        },
+        "format": [ 
+            [ "html", "cucumber-report.html" ],
+            "summary",
+            "progress-bar",
+            "json:./cucumber-report.json",
+            "rerun:reports/rerun.txt"
+        ]
+    }
+}
+
+```
+
+__🔍 Explanation__ :
+
+- 📂 `paths`: defines where the feature files are located (e.g., `tests/features/`).
+- 🧩 `require`: specifies the location of the step definition files (e.g., `tests/features/step-definitions/*.ts`).
+- ⚡ `"snippetInterface": "async-await"` — ensures generated step definitions use the `async/await` syntax, fully compatible with Playwright’s asynchronous actions.
+
+## 🧪 5. Implement test with Cucumber files  
+
+Create the following folders :
+
+- 📁 `features/`: contains `.feature` files (Gherkin scenarios).
+- 📁 `features/step-definitions/`: contains step definition files (`.ts`).
+
+__Example :__
+
+```ts
+// features/step-definitions/example.steps.ts
+
+import { Given, When, Then } from '@cucumber/cucumber';
+
+// Step definitions... 
+```
+
+__Example scenario file :__
+
+```yaml
+# features/example.feature
+Feature: Example feature
+  Scenario: Simple test
+    Given ...
+    When ...
+    Then ...
+```
+
+## 🚀 6. Run Tests
+
+Use the `--require-module ts-node/register` option so Cucumber can read the `cucumber.json` configuration:
+
+```bash 
+pnpm cucumber-js --require-module ts-node/register
+```
+
+__✅ Result example (in terminal):__
+
+```scss
+... 
+
+2 scenarios (2 passed)
+7 steps (7 passed)
+0m01.558s (executing steps: 0m01.543s)
+```

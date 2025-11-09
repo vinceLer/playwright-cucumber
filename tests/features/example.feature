@@ -1,6 +1,6 @@
-Feature: 🚀 Playwright cucumber examples
+Feature: Playwright cucumber examples
 
-  Scenario: 🎯 Playwright title is visible
+  Scenario: Playwright title is visible
     Given I open browser
     When I navigate to Playwright web site
     Then I see the "<title>" title
@@ -9,7 +9,7 @@ Feature: 🚀 Playwright cucumber examples
       | title          |
       | Playwright     |
 
-  Scenario: 🎯 Check Get started link redirection
+  Scenario: Check Get started link redirection
     Given I open browser
     When I navigate to Playwright web site
     When I click to Get Started

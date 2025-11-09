@@ -64,7 +64,7 @@ npx cucumber-js --require-module ts-node/register
 
 | Task | Script | Actual Command | Notes |
 |:----------------------------|:-----------------|:-------------------------------------|:-------------------------------------------|
-| **Run tests** 🎭 | `pnpm test` | `pnpm exec playwright test` | Runs all tests using Playwright |
+| **Run tests with Playwright** 🎭 | `pnpm test` | `pnpm exec playwright test` | Runs all tests using Playwright |
 | **Run tests in debug mode** 🎭 | `pnpm debug` | `pnpm exec playwright test --debug` | Launches tests in Playwright debug mode |
 | **Open test report** 🎭 | `pnpm report` | `pnpm exec playwright show-report` | Opens the HTML report, accessible at [http://localhost:9323](http://localhost:9323) |
 | **Run tests with Cucumber** 🥒 | `pnpm test:cucumber` | `cucumber-js --require-module ts-node/register` | Runs all tests using Cucumber |

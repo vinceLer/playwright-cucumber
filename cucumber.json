@@ -1,7 +1,7 @@
 {
     "default": {
         "paths": [ "features/" ],
-        "require": [  "steps/*.ts" ],
+        "require": [  "steps/*.ts", "setup/hooks/hooks.ts" ],
         "formatOptions": { "snippetInterface": "async-await" },
         "format": [
             [

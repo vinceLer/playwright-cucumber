@@ -1,5 +1,5 @@
 {
-  "name": "@steps",
+  "name": "@setup/hooks",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@src/pages": "workspace: ^1.0.0",
     "@setup/hooks": "workspace: ^1.0.0"
   }
 }

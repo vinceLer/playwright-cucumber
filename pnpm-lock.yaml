@@ -28,6 +28,12 @@ importers:
 
   core/base: {}
 
+  setup/hooks:
+    dependencies:
+      '@setup/hooks':
+        specifier: 'workspace: ^1.0.0'
+        version: 'link:'
+
   src/locators:
     dependencies:
       '@core/base':
@@ -48,6 +54,9 @@ importers:
 
   steps:
     dependencies:
+      '@setup/hooks':
+        specifier: 'workspace: ^1.0.0'
+        version: link:../setup/hooks
       '@src/pages':
         specifier: 'workspace: ^1.0.0'
         version: link:../src/pages

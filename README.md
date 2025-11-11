@@ -122,8 +122,8 @@ __`cucumber.json`__ :
 
 __🔍 Explanation__ :
 
-- 📂 `paths`: defines where the feature files are located (e.g., `tests/features/`).
-- 🧩 `require`: specifies the location of the step definition files (e.g., `tests/features/step-definitions/*.ts`).
+- 📂 `paths`: defines where the feature files are located (e.g., `features/`).
+- 🧩 `require`: specifies the location of the step definition files (e.g., `steps/*.ts`).
 - ⚡ `"snippetInterface": "async-await"` — ensures generated step definitions use the `async/await` syntax, fully compatible with Playwright’s asynchronous actions.
 
 __`tsconfig.json`__ : 
@@ -150,7 +150,7 @@ Create the following folders :
 __Example :__
 
 ```ts
-// features/step-definitions/example.steps.ts
+// steps/example.steps.ts
 
 import { Given, When, Then } from '@cucumber/cucumber';
 

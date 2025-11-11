@@ -1,5 +1,5 @@
 {
-  "name": "@features/step-definitions",
+  "name": "@steps",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

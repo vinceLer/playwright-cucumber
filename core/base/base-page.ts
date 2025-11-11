@@ -1,4 +1,4 @@
-import test, { type Cookie, type Page } from "@playwright/test";
+import { type Cookie, type Page } from "@playwright/test";
 
 export abstract class BasePage {
   protected readonly BASE_PAGE = "";
@@ -6,23 +6,14 @@ export abstract class BasePage {
   protected readonly PAGE_URL: string;
   protected readonly page: Page;
   protected pageStatusCode!: number;
-  protected startTime: number;
-  protected loadTime!: number;
 
   constructor(page: Page, pageName: string, pageUrl = "") {
     this.page = page;
     this.PAGE_NAME = pageName;
     this.PAGE_URL = pageUrl;
-    this.startTime = Date.now();
     page.on("response", async (response) => {
       if (response.url() === `${this.BASE_PAGE}${this.PAGE_URL}`) {
-        const endTime = Date.now();
-        this.loadTime = endTime - this.startTime;
         this.pageStatusCode = response.status();
-        test.info().annotations.push({
-          type: "page loaded ⏳",
-          description: `${this.PAGE_NAME} in ${this.loadTime} ms`,
-        }); // ⏳ 🚀 ⚡ 🌐
       }
     });
     page.on("console", (msg) => {
@@ -46,10 +37,6 @@ export abstract class BasePage {
 
   public async getPageTitle(): Promise<string> {
     return await this.page.title();
-  }
-
-  public async getLoadTime(): Promise<number> {
-    return this.loadTime;
   }
 
   public async getCookies(): Promise<Cookie[]> {

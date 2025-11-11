@@ -7,14 +7,16 @@ import { HomePage } from '@src/pages/home.page';
 let browser: Browser;
 let page: Page;
 
+let home: HomePage;
+
 Given('I open browser', async function () {
   browser = await chromium.launch();
   page = await browser.newPage();
 });
 
 When('I navigate to Playwright web site', async function () {
-  // const home = new HomePage(page);
-  // await home.open();
+  home = new HomePage(page);
+  await home.open();
   await page.goto('https://playwright.dev');
 });
 

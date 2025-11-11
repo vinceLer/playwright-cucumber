@@ -46,17 +46,17 @@ importers:
         specifier: 'workspace: ^1.0.0'
         version: link:../locators
 
-  tests:
+  steps:
     dependencies:
       '@src/pages':
         specifier: 'workspace: ^1.0.0'
         version: link:../src/pages
 
-  tests/features/step-definitions:
+  tests:
     dependencies:
       '@src/pages':
         specifier: 'workspace: ^1.0.0'
-        version: link:../../../src/pages
+        version: link:../src/pages
 
 packages:
 

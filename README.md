@@ -103,8 +103,8 @@ __`cucumber.json`__ :
 ```json
 {
     "default": {
-        "paths": [ "tests/features/" ],
-        "require": [ "tests/features/step-definitions/*.ts" ],
+        "paths": [ "features/" ],
+        "require": [ "steps/*.ts" ],
         "formatOptions": {
             "snippetInterface": "async-await"
         },
@@ -145,7 +145,7 @@ __`tsconfig.json`__ :
 Create the following folders :
 
 - 📁 `features/`: contains `.feature` files (Gherkin scenarios).
-- 📁 `features/step-definitions/`: contains step definition files (`.ts`).
+- 📁 `steps/`: contains step definition files (`.ts`).
 
 __Example :__
 

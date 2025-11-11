@@ -1,14 +1,8 @@
 {
     "default": {
-        "paths": [
-            "tests/features/"
-        ],
-        "require": [
-            "tests/features/step-definitions/*.ts"
-        ],
-        "formatOptions": {
-            "snippetInterface": "async-await"
-        },
+        "paths": [ "features/" ],
+        "require": [  "steps/*.ts" ],
+        "formatOptions": { "snippetInterface": "async-await" },
         "format": [
             [
                 "html",

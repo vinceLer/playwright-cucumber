@@ -19,5 +19,10 @@
     "@playwright/test": "^1.56.1",
     "@types/node": "^24.10.0",
     "ts-node": "^10.9.2"
+  },
+  "pnpm": {
+    "overrides": {
+      "glob@>=11.0.0 <11.1.0": ">=11.1.0"
+    }
   }
 }

@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  glob@>=11.0.0 <11.1.0: '>=11.1.0'
+
 importers:
 
   .:
@@ -13,7 +16,7 @@ importers:
         version: 12.2.0
       '@cucumber/html-formatter':
         specifier: ^22.0.0
-        version: 22.0.0(@cucumber/messages@30.1.0)
+        version: 22.0.0(@cucumber/messages@31.0.0)
       '@playwright/test':
         specifier: ^1.56.1
         version: 1.56.1
@@ -119,7 +122,7 @@ packages:
       '@cucumber/gherkin-utils': 9.2.0
       '@cucumber/html-formatter': 21.14.0(@cucumber/messages@28.1.0)
       '@cucumber/junit-xml-formatter': 0.8.1(@cucumber/messages@28.1.0)
-      '@cucumber/message-streams': 4.0.1(@cucumber/messages@30.1.0)
+      '@cucumber/message-streams': 4.0.1(@cucumber/messages@31.0.0)
       '@cucumber/messages': 28.1.0
       '@cucumber/pretty-formatter': 1.0.1(@cucumber/cucumber@12.2.0)(@cucumber/messages@28.1.0)
       '@cucumber/tag-expressions': 6.2.0
@@ -131,7 +134,7 @@ packages:
       debug: 4.4.3(supports-color@8.1.1)
       error-stack-parser: 2.1.4
       figures: 3.2.0
-      glob: 11.0.3
+      glob: 11.1.0
       has-ansi: 4.0.1
       indent-string: 4.0.0
       is-installed-globally: 0.4.0
@@ -163,7 +166,7 @@ packages:
       '@cucumber/messages': '>=17.1.1'
     dependencies:
       '@cucumber/gherkin': 34.0.0
-      '@cucumber/message-streams': 4.0.1(@cucumber/messages@30.1.0)
+      '@cucumber/message-streams': 4.0.1(@cucumber/messages@31.0.0)
       '@cucumber/messages': 28.1.0
       commander: 9.1.0
       source-map-support: 0.5.21
@@ -200,12 +203,12 @@ packages:
       '@cucumber/messages': 28.1.0
     dev: true
 
-  /@cucumber/html-formatter@22.0.0(@cucumber/messages@30.1.0):
+  /@cucumber/html-formatter@22.0.0(@cucumber/messages@31.0.0):
     resolution: {integrity: sha512-buWuKcXRErQWE8E3daFo0R+TKfyAQVbYnad0Ee5HK2zRNJyXhMmPXGJeaTVFQVPoyXA12m83Wy1kx9WeyEqVOQ==}
     peerDependencies:
       '@cucumber/messages': '>=18'
     dependencies:
-      '@cucumber/messages': 30.1.0
+      '@cucumber/messages': 31.0.0
     dev: true
 
   /@cucumber/junit-xml-formatter@0.8.1(@cucumber/messages@28.1.0):
@@ -220,12 +223,12 @@ packages:
       xmlbuilder: 15.1.1
     dev: true
 
-  /@cucumber/message-streams@4.0.1(@cucumber/messages@30.1.0):
+  /@cucumber/message-streams@4.0.1(@cucumber/messages@31.0.0):
     resolution: {integrity: sha512-Kxap9uP5jD8tHUZVjTWgzxemi/0uOsbGjd4LBOSxcJoOCRbESFwemUzilJuzNTB8pcTQUh8D5oudUyxfkJOKmA==}
     peerDependencies:
       '@cucumber/messages': '>=17.1.1'
     dependencies:
-      '@cucumber/messages': 30.1.0
+      '@cucumber/messages': 31.0.0
     dev: true
 
   /@cucumber/messages@26.0.1:
@@ -255,8 +258,8 @@ packages:
       uuid: 11.1.0
     dev: true
 
-  /@cucumber/messages@30.1.0:
-    resolution: {integrity: sha512-KxnsSjHz9EGF23GeZc3BRMK2+bagt2p87mwwNfisBK7BfuyvnXJumyBQJJN4xv5SLSzBKxH3FsZnuOf8LwsHhg==}
+  /@cucumber/messages@31.0.0:
+    resolution: {integrity: sha512-Dqhatp4AjMsH9SREfWz3Q8nlGuwJMTW7YAW5L3OzRId86ZUEu/a8vIL1RO2c0agQefuBS2SVH9fEZ66ovrMYRA==}
     dependencies:
       class-transformer: 0.5.1
       reflect-metadata: 0.2.2
@@ -343,8 +346,8 @@ packages:
     engines: {node: '>=14'}
     dev: true
 
-  /@tsconfig/node10@1.0.11:
-    resolution: {integrity: sha512-DcRjDCujK/kCk/cUe8Xz8ZSpm8mS3mNNpta+jGCA6USEDfktlNvm1+IuZ9eTcDbNk41BHwpHHeW+N1lKCz4zOw==}
+  /@tsconfig/node10@1.0.12:
+    resolution: {integrity: sha512-UCYBaeFvM11aU2y3YPZ//O5Rhj+xKyzy7mvcIoAjASbigy8mHMryP5cK7dgjlz2hWxh1g5pLw084E0a/wlUSFQ==}
     dev: true
 
   /@tsconfig/node12@1.0.11:
@@ -575,8 +578,8 @@ packages:
     dev: true
     optional: true
 
-  /glob@11.0.3:
-    resolution: {integrity: sha512-2Nim7dha1KVkaiF4q6Dj+ngPPMdfvLJEOpZk/jKiUAkqKebpGAWQXAq9z1xu9HKu5lWfqw/FASuccEjyznjPaA==}
+  /glob@11.1.0:
+    resolution: {integrity: sha512-vuNwKSaKiqm7g0THUBu2x7ckSs3XJLXE+2ssL7/MfTGPLLcrJQ/4Uq1CjPTtO5cCIiRxqvN6Twy1qOwhL0Xjcw==}
     engines: {node: 20 || >=22}
     hasBin: true
     dependencies:
@@ -1025,7 +1028,7 @@ packages:
         optional: true
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
-      '@tsconfig/node10': 1.0.11
+      '@tsconfig/node10': 1.0.12
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
